@@ -1,0 +1,36 @@
+Aqui está uma proposta de roteiro estruturado para o vídeo, cobrindo todos os pontos exigidos no documento do estudo de caso.
+
+**Tempo estimado:** 3 a 5 minutos
+**Formato:** Gravação de ecrã (screencast) com narração e, opcionalmente, a sua câmara num dos cantos.
+
+---
+
+### 1. Introdução (Aprox. 30 segundos)
+
+* **Visual:** Ecrã com o título do trabalho, o seu nome e uma breve apresentação do problema (ex: slide inicial ou o enunciado do estudo de caso).
+* **Áudio:** "Olá, o meu nome é [O Seu Nome] e este é o vídeo de apresentação do Estudo de Caso do 2º Bimestre sobre a classificação de avaliações de produtos. O objetivo deste trabalho foi desenvolver um sistema em Python para identificar automaticamente se 100 avaliações de clientes são positivas ou negativas, utilizando duas avaliações de referência e aplicando as métricas de Jaccard e Levenshtein."
+
+### 2. Metodologia Utilizada (Aprox. 45 segundos)
+
+* **Visual:** Mostrar o ficheiro Excel "avaliacoes.xlsx" original e, em seguida, transitar para o início do código (importação de bibliotecas).
+* **Áudio:** "Para a metodologia, utilizei a biblioteca `pandas` para a leitura do ficheiro Excel fornecido. Antes de aplicar as métricas, foi essencial fazer o pré-processamento dos textos. Criei funções para converter tudo para letras minúsculas, remover pontuações e eliminar espaços desnecessários. Para o cálculo de Jaccard, os textos foram também tokenizados, ou seja, transformados num conjunto de palavras soltas. Para Levenshtein, mantive o texto como uma única string processada."
+
+### 3. Explicação dos Principais Trechos de Código (Aprox. 1 minuto)
+
+* **Visual:** Mostrar o código-fonte em Python, focando-se nas funções `jaccard` e `levenshtein`, e no loop de classificação.
+* **Áudio:** "No código, destaco duas funções principais. A função `jaccard` calcula a intersecção dividida pela união dos conjuntos de palavras de cada avaliação em relação às referências. Já a função `levenshtein` utiliza programação dinâmica para criar uma matriz e calcular o número mínimo de inserções, deleções ou substituições de caracteres necessárias para transformar a avaliação na referência. Depois, num loop (laço de repetição), o código percorre as 100 avaliações, aplica as duas funções face às referências positiva e negativa, e classifica o texto com base no valor que indica maior proximidade."
+
+### 4. Resultados Obtidos (Aprox. 30 segundos)
+
+* **Visual:** Mostrar a tabela Excel gerada com os resultados finais (`resultados_classificacao.xlsx`) e, de seguida, um resumo com as contagens das perguntas.
+* **Áudio:** "Passando aos resultados: a métrica de Jaccard classificou 29 avaliações como positivas e 71 como negativas. Por outro lado, a distância de Levenshtein classificou 43 como positivas e 57 como negativas. No total, as duas métricas concordaram em 66 avaliações e produziram classificações diferentes em 34 casos."
+
+### 5. Comparação e Análise das Divergências (Aprox. 45 segundos)
+
+* **Visual:** Mostrar lado a lado (num slide ou comentário do código) a diferença concetual entre Jaccard (conjunto de palavras) e Levenshtein (edição de caracteres).
+* **Áudio:** "Ao analisar as divergências, percebemos que ocorrem porque as métricas avaliam o texto de formas completamente distintas. Jaccard atua como 'bag-of-words': ignora a ordem das palavras e foca-se apenas nos termos em comum. Levenshtein atua ao nível do caractere: é altamente sensível à ordem das palavras, ao comprimento total da frase e a sinónimos. Uma avaliação que contenha as exatas mesmas palavras da referência, mas escritas por outra ordem, terá uma excelente pontuação em Jaccard, mas uma péssima pontuação em Levenshtein."
+
+### 6. Conclusão (Aprox. 30 segundos)
+
+* **Visual:** Ecrã com um resumo final ou a câmara em ecrã inteiro.
+* **Áudio:** "Concluo que, para este cenário de classificação de avaliações, a métrica de Jaccard demonstrou ser mais adequada. Como as avaliações de clientes variam muito na estrutura das frases, mas costumam utilizar palavras-chave semelhantes para expressar sentimento (como 'excelente', 'péssima' ou 'recomendo'), a abordagem semântica de Jaccard captura melhor a essência do feedback do que a rigidez estrutural de Levenshtein. Obrigado pela atenção!"
