@@ -1,9 +1,4 @@
-Aqui está uma proposta de roteiro estruturado para o vídeo, cobrindo todos os pontos exigidos no documento do estudo de caso.
 
-**Tempo estimado:** 3 a 5 minutos
-**Formato:** Gravação de ecrã (screencast) com narração e, opcionalmente, a sua câmara num dos cantos.
-
----
 
 ### 1. Introdução (Aprox. 30 segundos)
 
